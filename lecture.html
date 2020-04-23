@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        body{
+            padding:0;
+            margin:0;
+            background-image:url('files/english1.jpg');
+        }
+        iframe{
+height:90vh;
+width:100%;
+        }
+        button{
+            background:gold;
+            font-size: 1.2em;
+            padding:1em;
+            margin-left:2em;
+            outline:none;
+        }
+        h2{
+            position:absolute;
+            font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            top:0;
+            right:23%;
+            font-size: 2rem;
+        }
+    </style>
+</head>
+
+<body>
+    <button onclick="sound()">Audio play</button>
+    <button onclick="stop()">Audio pause</button>
+    <a target="frame" onclick="back() "href="files/Chapter No. 2 Chinese New Year.pdf"><button>Text</button></a>
+    <h2>Prof. Muhammad Nawaz Amin</h2>
+    <a href="lecture.html"><button>Back</button></a>
+    <iframe name="frame" src="" frameborder="0" scroll="none"></iframe>
+    <audio id="myAudio" src="files/Chapter 2 Patriotism.m4a">
+    <script>
+        var x=document.getElementsByTagName("button")
+        function sound(){
+            document.getElementById('myAudio').play();
+        }
+        function stop(){
+            document.getElementById('myAudio').pause();
+        }
+        function back(){
+            document.body.style.background="rgb(106, 107, 107)";
+            document.getElementsByTagName("h2")[0].style.color="white";
+           x[0].style.background="white";
+           x[1].style.background="white";
+           x[2].style.background="white";
+           x[3].style.background="white";
+        }
+    </script>
+</body>
+</html>
